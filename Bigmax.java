@@ -2,8 +2,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.HashSet;
 
-public class Leitor {
+public class Bigmax {
 
 	public String[] getPalavavrasDoTXT(String nomeDoArquivo) {
 		File arquivo = new File("leipzig100k.txt");
@@ -32,4 +34,15 @@ public class Leitor {
 		System.out.println("Split finalizado!");
 		return palavras;
 	}
+
+	public String[] eliminaPalavrasRepitidas(String[] palavras){
+
+        System.out.println("Iniciando a remocao de palavras repetidas...");
+
+        HashSet<String> uniqueWords = new HashSet<>(Arrays.asList(palavras));
+
+		System.out.println("Remocao de palavras repetidas finalizada!");
+
+        return uniqueWords.toArray(new String[0]);
+    }
 }
