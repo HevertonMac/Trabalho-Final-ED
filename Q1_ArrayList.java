@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 
 public class Q1_ArrayList {
     public static void main(String[] args) {
