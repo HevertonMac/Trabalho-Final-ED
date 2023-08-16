@@ -36,10 +36,9 @@ public class Bigmax {
 	}
 
 	public String[] eliminaPalavrasRepitidas(String[] palavras){
-        System.out.println("Iniciando a remocao de palavras repetidas...");
-        HashSet<String> uniqueWords = new HashSet<>(Arrays.asList(palavras));
-		//é isso mesmo que você está pensando, eu estou usando um HashSet para remover as palavras repetidas
+		System.out.println("Iniciando a remocao de palavras repetidas...");
+		HashSet<String> uniqueWords = new HashSet<>(Arrays.asList(palavras));
 		System.out.println("Remocao de palavras repetidas finalizada!");
-        return uniqueWords.toArray(new String[0]);
+		return uniqueWords.toArray(new String[0]);
     }
 }
