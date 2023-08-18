@@ -29,7 +29,7 @@ public class Bigmax {
 			System.out.println("Ocorreu um erro ao ler o arquivo: " + e.getMessage());
 		}
 
-		System.out.println("Iniciando o split...");
+		System.out.println("Iniciando o split do texto...");
 		String[] palavras = texto.split("[\\s,.;:!?\"_]+");
 		System.out.println("Split finalizado!");
 		return palavras;
