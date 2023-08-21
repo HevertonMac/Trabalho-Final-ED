@@ -1,4 +1,5 @@
 import java.util.Vector;
+
 public class ClasseVector {
 	public static void main(String[] args) {
 		Vector<String> vet = new Vector<String>();
@@ -8,19 +9,25 @@ public class ClasseVector {
 
 		// Insercao
 
+		System.out.println("\nIniciando insercao das palavras do arquivo leipzig100k.txt na classe Vector");
+
 		long tempoInicial = System.nanoTime();
 		for(String palavra : palavras){
 			vet.add(palavra);
 		}
 		long tempoFinal = System.nanoTime();
 
+		System.out.println("Insercao concluida!");
+
 		long tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-		System.out.println("Tempo de insercao classe Vector: " + tempoTotal + " microsegundos");
+		System.out.println("Tempo de insercao classe Vector: " + tempoTotal + " microsegundos\n");
 
 		// Consulta
 
 		String[] palavrasConsultadas = {"Lisbon", "NASA", "Kyunghee", "Konkuk", "Sogang", "momentarily", "rubella", "vaccinations", "government", "Authorities"};
+
+		System.out.println("Iniciando consulta das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities ");
 
 		tempoInicial = System.nanoTime();
 		for(String palavra : palavrasConsultadas){
@@ -31,9 +38,11 @@ public class ClasseVector {
 
 		tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-		System.out.println("Tempo de consulta classe Vector: " + tempoTotal + " microsegundos");
+		System.out.println("Tempo de consulta classe Vector: " + tempoTotal + " microsegundos\n");
 
 		// Remocao
+		
+		System.out.println("Iniciando remocao das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities ");
 
 		tempoInicial = System.nanoTime();
 		vet.remove("Lisbon");
@@ -47,6 +56,8 @@ public class ClasseVector {
 		vet.remove("government");
 		vet.remove("Authorities");
 		tempoFinal = System.nanoTime();
+
+		System.out.println("Remocao concluida!");
 
 		tempoTotal = (tempoFinal - tempoInicial)/1000;
 

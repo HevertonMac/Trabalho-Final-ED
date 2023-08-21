@@ -9,20 +9,26 @@ public class ClasseHashMap {
 
         // Insercao
 
+        System.out.println("\nIniciando insercao das palavras do arquivo leipzig100k.txt na classe HashMap");
+
         long tempoInicial = System.nanoTime();
         for(String palavra : palavras){
             hash.put(palavra, 0);
         }
         long tempoFinal = System.nanoTime();
 
+        System.out.println("Insercao concluida!");
+
         long tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-        System.out.println("Tempo de insercao classe HashMap: " + tempoTotal + " microsegundos");
+        System.out.println("Tempo de insercao classe HashMap: " + tempoTotal + " microsegundos\n");
 
         // Consulta 
         
         String[] palavrasConsultadas = {"Lisbon", "NASA", "Kyunghee", "Konkuk", "Sogang", "momentarily", "rubella", "vaccinations", "government", "Authorities"};
         
+        System.out.println("Iniciando consulta das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities");
+
         tempoInicial = System.nanoTime();
         for(String palavra : palavrasConsultadas){
             if(hash.containsKey(palavra))
@@ -32,9 +38,11 @@ public class ClasseHashMap {
 
         tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-        System.out.println("Tempo de consulta classe HashMap: " + tempoTotal + " microsegundos");
+        System.out.println("Tempo de consulta classe HashMap: " + tempoTotal + " microsegundos\n");
 
         // Remocao
+
+        System.out.println("Iniciando remocao das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities");
 
         tempoInicial = System.nanoTime();
         hash.remove("Lisbon");
@@ -48,6 +56,8 @@ public class ClasseHashMap {
         hash.remove("government");
         hash.remove("Authorities");
         tempoFinal = System.nanoTime();
+
+        System.out.println("Remocao concluida!");
 
         tempoTotal = (tempoFinal - tempoInicial)/1000;
 

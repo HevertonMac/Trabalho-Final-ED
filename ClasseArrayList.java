@@ -9,19 +9,25 @@ public class ClasseArrayList {
 
         // Insercao
 
+        System.out.println("\nIniciando insercao das palavras do arquivo leipzig100k.txt na classe ArrayList");
+
         long tempoInicial = System.nanoTime();
         for(String palavra : palavras){
             arrlist.add(palavra);
         }
         long tempoFinal = System.nanoTime();
 
+        System.out.println("Insercao concluida!");
+
         long tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-        System.out.println("Tempo de insercao classe ArrayList: " + tempoTotal + " microsegundos");
+        System.out.println("Tempo de insercao classe ArrayList: " + tempoTotal + " microsegundos\n");
 
         // Consulta
 
         String[] palavrasConsultadas = {"Lisbon", "NASA", "Kyunghee", "Konkuk", "Sogang", "momentarily", "rubella", "vaccinations", "government", "Authorities"};
+
+        System.out.println("Iniciando consulta das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities");
 
         tempoInicial = System.nanoTime();
         for(String palavra : palavrasConsultadas){
@@ -32,9 +38,11 @@ public class ClasseArrayList {
 
         tempoTotal = (tempoFinal - tempoInicial)/1000;
 
-        System.out.println("Tempo de consulta classe ArrayList: " + tempoTotal + " microsegundos");
+        System.out.println("Tempo de consulta classe ArrayList: " + tempoTotal + " microsegundos\n");
 
         // Remocao
+
+        System.out.println("Iniciando remocao das palavras: Lisbon, NASA, Kyunghee, Konkuk, Sogang, momentarily, rubella, vaccinations, government, Authorities");
         
         tempoInicial = System.nanoTime();
         arrlist.remove("Lisbon");
@@ -48,6 +56,8 @@ public class ClasseArrayList {
         arrlist.remove("government");
         arrlist.remove("Authorities");
         tempoFinal = System.nanoTime();
+
+        System.out.println("Remocao concluida!");
 
         tempoTotal = (tempoFinal - tempoInicial)/1000;
 
